@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKK Shuttle Car Service | Bookings</title>
+  <meta name="description" content="Book your ride with SKK Shuttle Car Service — safe, reliable and affordable transportation made simple.">
+  <link rel="canonical" href="https://example.com/Booking.html">
+  <meta property="og:title" content="SKK Shuttle Car Service | Bookings">
+  <meta property="og:description" content="Book your SKK shuttle ride quickly and easily.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/Booking.html">
+  <meta property="og:image" content="LOGO.jpg">
+  <link rel="stylesheet" href="stylesheet1.css">
+</head>
+
+<body class="dark-theme">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <img src="LOGO.jpg" alt="Website logo" class="logo">
+    <h1>BOOKINGS</h1>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="main-nav">
+    <button id="nav-toggle">Menu</button>
+    <ul>
+      <li><a href="Index HTML.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="Booking.html" aria-current="page">Booking</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <section class="booking-section">
+      <h2>Book Your Shuttle</h2>
+      <p><strong>Please fill out the form below to request your ride:</strong></p>
+
+      <form id="bookingForm" class="form" novalidate>
+        <label for="name"><strong>Name and Surname</strong></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email"><strong>Email</strong></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="contact"><strong>Contact Number</strong></label>
+        <input type="tel" id="contact" name="contact" placeholder="07x xxx xxxx" required>
+
+        <label for="pickup"><strong>Pickup Location</strong></label>
+        <input type="text" id="pickup" name="pickup" placeholder="Pickup address" required>
+
+        <label for="destination"><strong>Destination</strong></label>
+        <input type="text" id="destination" name="destination" placeholder="Destination" required>
+
+        <label for="date"><strong>Date and Time</strong></label>
+        <input type="datetime-local" id="date" name="date" required>
+
+        <label for="message"><strong>Additional Notes</strong></label>
+        <textarea id="message" name="message" rows="4" placeholder="Add any special instructions..."></textarea>
+
+        <button type="submit" class="btn">Submit Booking</button>
+      </form>
+    </section>
+
+    <p><a href="Index HTML.html" class="btn">Back to Home Page</a></p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> SKK Shuttle Car Service | All Rights Reserved</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script>
+    // Auto-update year
+    (function(){
+      const y = new Date().getFullYear();
+      document.getElementById('year').textContent = y;
+    })();
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if(toggle && nav){
+      toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+    }
+
+    // Booking form validation
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function(e){
+      let errors = [];
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      const pickup = document.getElementById('pickup').value.trim();
+      const destination = document.getElementById('destination').value.trim();
+      const date = document.getElementById('date').value;
+
+      if(!name) errors.push("Name is required.");
+      if(!/^\S+@\S+\.\S+$/.test(email)) errors.push("Enter a valid email.");
+      if(!contact) errors.push("Contact number is required.");
+      if(!pickup) errors.push("Pickup location is required.");
+      if(!destination) errors.push("Destination is required.");
+      if(!date) errors.push("Please choose a date and time.");
+
+      if(errors.length){
+        e.preventDefault();
+        alert("Please fix the following:\n- " + errors.join("\n- "));
+      } else {
+        alert("Thank you! Your booking has been submitted successfully.");
+      }
+    });
+  </script>
+</body>
+</html>

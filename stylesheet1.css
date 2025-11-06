@@ -1,0 +1,141 @@
+body{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding: 0px; margin: 0px; min-height: 100vh;
+     background-image: url("BACKGROUND\ 4.jpg");
+     background-repeat: no-repeat;
+     background-size: cover; background-position: center;
+     background-attachment: fixed;image-rendering: crisp-edges;
+     box-sizing: border-box; text-align: center;}
+header{background: #333; color: #fff;
+       padding: 1rem; text-align: center;}
+header img{max-height: 100px;}
+nav{background: #fff;}
+nav ul{list-style: none;margin: 0;
+       padding: 0;display: flex;
+       justify-content: center;}
+nav ul li{margin: 0;}
+nav ul li a{display: block;padding: 1rem;
+            color: #fff;text-decoration: none;}
+nav ul li a:hover{background: #555;}  
+main{flex: 1;padding: 2rem;}
+footer{background: #333;color: #fff;
+       text-align: center;padding: 1rem;}    
+       /* ====== Enhancements for Bookings Page (Responsiveness, Form Styling, and Visibility) ====== */
+
+/* Fix for white nav text on white background */
+nav {
+  background: #222; /* dark nav bar */
+}
+nav ul li a {
+  color: #fff;
+}
+nav ul li a:hover {
+  background: #555;
+  color: #1fb6ff; /* soft blue accent */
+}
+
+/* Mobile nav toggle button */
+#nav-toggle {
+  display: none;
+}
+
+/* Booking form layout */
+form.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.5rem auto;
+  max-width: 400px;
+  background: rgba(0,0,0,0.45);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+form.form label {
+  display: block;
+  text-align: left;
+  width: 100%;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+}
+
+form.form input,
+form.form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1e293b;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+form.form button.btn {
+  background: #1fb6ff;
+  color: #111;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+form.form button.btn:hover {
+  background: #0ea5e9;
+}
+
+/* Responsive footer text */
+footer.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* === Mobile responsiveness === */
+@media (max-width: 600px){
+  body {
+    font-size: 15px;
+  }
+
+  #nav-toggle {
+    display: inline-block;
+    background: #1fb6ff;
+    color: #111;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
+
+  form.form {
+    width: 90%;
+  }
+
+  header img {
+    max-height: 80px;
+  }
+}
+
+.btn {
+  background: #1fb6ff;
+  color: #111;
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 1rem;
+}

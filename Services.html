@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKK Shuttle Car Service | Services</title>
+  <meta name="description" content="Explore SKK Shuttle Car Service's reliable transport options: airport transfers, corporate travel, events, and more.">
+  <link rel="canonical" href="https://example.com/Services.html">
+  <meta property="og:title" content="SKK Shuttle Car Service | Services">
+  <meta property="og:description" content="Airport transfers, corporate shuttle, events, group travel, and custom transport solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/Services.html">
+  <meta property="og:image" content="LOGO.jpg">
+  <link rel="stylesheet" href="stylesheet5.css">
+</head>
+
+<body class="dark-theme">
+  
+  <header class="site-header">
+    <img src="LOGO.jpg" alt="Website logo" class="logo">
+    <h1>Our Services</h1>
+  </header>
+
+
+  <nav id="main-nav" class="main-nav">
+    <button id="nav-toggle">Menu</button>
+    <ul>
+      <li><a href="Index HTML.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Services.html" aria-current="page">Services</a></li>
+      <li><a href="Booking.html">Booking</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <h2>Our Services</h2>
+
+    <div class="SERVICE">
+      <h4>Airport Transfers</h4>
+      <p>We provide punctual and hassle-free pick-up and drop-off services to and from the airport. Our drivers track flight schedules to ensure you never miss a flight or wait too long after landing.</p>
+      <img src="AIRPORT DROPOFF.jpg" alt="Airport Dropoff Service" width="200" height="250">
+    </div>
+
+    <div class="SERVICE">
+      <h4>Corporate Shuttle</h4>
+      <p>Reliable transport solutions for businesses and professionals. Whether it's daily staff shuttles, meetings, or conferences, we ensure smooth travel that saves time and boosts productivity.</p>
+    </div>
+
+    <div class="SERVICE">
+      <h4>Event Transportation</h4>
+      <p>From weddings and parties to concerts and sporting events, we offer group transport that's safe, comfortable, and perfectly coordinated.</p>
+      <img src="TRIP MOMENTS.jpg" alt="Trip Moments" width="200" height="250">
+    </div>
+
+    <div class="SERVICE">
+      <h4>Group & Family Travel</h4>
+      <p>Spacious vehicles for families, tour groups, and friends traveling together. Enjoy the journey while we handle the logistics.</p>
+    </div>
+
+    <div class="SERVICE">
+      <h4>Custom Shuttle Solutions</h4>
+      <p>We also provide tailored transport packages for schools, tours, or organizations needing regular or specialized shuttle services.</p>
+      <img src="SERVICES ROUTES.jpg" alt="Service Routes" width="200" height="250">
+    </div>
+
+    <p><a href="Index HTML.html" class="btn">Back to Home Page</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> SKK Shuttle Car Service | All Rights Reserved</p>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script>
+    
+    (function(){
+      const y = new Date().getFullYear();
+      document.getElementById('year').textContent = y;
+    })();
+
+   
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    if(toggle && nav){
+      toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+    }
+  </script>
+</body>
+</html>

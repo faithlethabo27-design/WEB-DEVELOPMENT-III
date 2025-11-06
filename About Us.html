@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKK Shuttle Car Service | About Us</title>
+    <meta name="description" content="Learn about SKK Shuttle Car Service — reliable, safe and comfortable transportation for every journey.">
+    <link rel="canonical" href="https://example.com/About%20Us.html">
+    <meta property="og:title" content="SKK Shuttle Car Service | About Us">
+    <meta property="og:description" content="We believe every journey should be safe, reliable, and comfortable.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/About%20Us.html">
+    <meta property="og:image" content="LOGO.jpg">
+    <link rel="stylesheet" href="stylesheet3.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <img src="LOGO.jpg" alt="Website logo" class="logo">
+        <h1>About Us</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav id="main-nav" class="main-nav">
+    <button id="nav-toggle">Menu</button>
+    <ul>
+      <li><a href="Index HTML.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Services.html" aria-current="page">Services</a></li>
+      <li><a href="Booking.html">Booking</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <section>
+            <p><strong>SKK Shuttle Car Service:</strong> We believe that every journey should be safe, reliable and comfortable. We are a dedicated shuttle service committed to providing efficient transportation solutions for individuals, businesses and groups. Whether you are heading to the airport, attending a corporate event or simply need a stress-free ride across town, we have got you covered.</p>
+
+            <p><strong>Our mission</strong> is simple — to move with trust, care and efficiency. We are more than your travel provider — we are your partner on the road.</p>
+
+            <p>Following are links showcasing some of our recent trips:</p>
+
+            <ul class="video-links">
+                <li><a href="https://www.facebook.com/skk.molala/videos/195897043503528/" target="_blank">Watch on Facebook 1</a></li>
+                <li><a href="https://www.facebook.com/skk.molala/videos/260770693492234/" target="_blank">Watch on Facebook 2</a></li>
+                <li><a href="https://www.facebook.com/skk.molala/videos/440785458802601/" target="_blank">Watch on Facebook 3</a></li>
+            </ul>
+        </section>
+
+        <p><a href="Index HTML.html" class="btn">Back to Home Page</a></p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> SKK Shuttle Car Service | All Rights Reserved</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script>
+        // Auto-update footer year
+        (function(){
+            const y = new Date().getFullYear();
+            document.getElementById('year').textContent = y;
+        })();
+
+        // Mobile nav toggle
+        const toggle = document.getElementById('nav-toggle');
+        const nav = document.getElementById('main-nav');
+        if(toggle && nav){
+            toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+        }
+    </script>
+</body>
+</html>

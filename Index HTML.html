@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKK Shuttle Car Service | Home</title>
+    <meta name="description" content="SKK Shuttle Car Service — bridging convenience and affordability with safe and reliable transport." />
+    <link rel="canonical" href="https://example.com/Index.html">
+    <meta property="og:title" content="SKK Shuttle Car Service | Home" />
+    <meta property="og:description" content="Affordable, safe and convenient shuttle transport services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/Index.html" />
+    <meta property="og:image" content="LOGO.jpg" />
+    <link rel="stylesheet" href="stylesheet2.css">
+</head>
+
+<body class="dark-theme">
+
+   
+   <header class="site-header">
+      <img src="LOGO.jpg" alt="Website logo" class="logo">
+      <h1>SKK CAR SHUTTLE SERVICES WEBSITE</h1>
+   </header>
+
+   <nav id="main-nav" class="main-nav">
+    <button id="nav-toggle">Menu</button>
+    <ul>
+      <li><a href="Index HTML.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Services.html" aria-current="page">Services</a></li>
+      <li><a href="Booking.html">Booking</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+    </ul>
+  </nav>
+
+
+   <main class="container">
+      <section class="hero">
+         <h2>Welcome</h2>
+         <p><strong>Our goal is to bridge convenience and affordability.</strong></p>
+      </section>
+
+      <section class="intro">
+         <p>SKK Shuttle Car Service offers local travel, airport transfers, and group bookings. We prioritise safety, punctuality, and comfort for every passenger.</p>
+      </section>
+   </main>
+
+
+   <footer class="site-footer">
+      <p>&copy; <span id="year"></span> SKK Shuttle Car Service | All Rights Reserved</p>
+   </footer>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="" crossorigin="anonymous"></script>
+   <script>
+     
+      (function(){
+         const y = new Date().getFullYear();
+         document.getElementById('year').textContent = y;
+      })();
+
+     
+      document.getElementById('nav-toggle').addEventListener('click', function(){
+         const nav = document.getElementById('main-nav');
+         nav.classList.toggle('open');
+      });
+   </script>
+</body>
+</html>
