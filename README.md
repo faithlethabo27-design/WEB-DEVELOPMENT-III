@@ -5,6 +5,7 @@ THE FOLLOWING CHANGES ARE BASED ON THE USE OF JAVASCRIPT IN PART
 ---
 ### [1.1.1] - 2025-11-03
 Refinements and Improvements from Part 2 Feedback and Reflection
+
 1.General Website Improvements
 
 Previous Issue:
